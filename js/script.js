@@ -33,4 +33,14 @@ document.getElementById('giocaDadiBtn').addEventListener('click', function() {
 
      // Generiamo un numero casuale da 1 a 6 per il computer
     const computer = Math.floor(Math.random() * 6) + 1;
+
+    // Determiniamo il vincitore
+    let risultato;
+    if (giocatore > computer) {
+        risultato = 'Il giocatore ha vinto!';
+    } else if (computer > giocatore) {
+        risultato = 'Il computer ha vinto!';
+    } else {
+        risultato = 'Pareggio!';
+    }
 }
