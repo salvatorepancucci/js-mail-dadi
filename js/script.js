@@ -15,6 +15,13 @@ function checkEmail() {
             break;
         }
     }
+
+    // Stampiamo un messaggio appropriato sull'esito del controllo
+    if (isAllowed) {
+        alert('Accesso consentito!');
+    } else {
+        alert('Accesso negato! Email non autorizzata.');
+    }
 }
 
 // Dice
