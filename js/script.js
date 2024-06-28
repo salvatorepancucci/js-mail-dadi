@@ -43,4 +43,12 @@ document.getElementById('giocaDadiBtn').addEventListener('click', function() {
     } else {
         risultato = 'Pareggio!';
     }
-}
+
+    // Stampiamo il risultato
+    const dadiResultDiv = document.getElementById('dadiResult');
+    dadiResultDiv.innerHTML = `<div class="alert alert-info" role="alert">
+                                    Giocatore: ${giocatore}<br>
+                                    Computer: ${computer}<br><br>
+                                    ${risultato}
+                                </div>`;
+});
