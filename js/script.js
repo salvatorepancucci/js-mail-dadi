@@ -6,6 +6,15 @@ function checkEmail() {
 
     // Chiediamo all'utente di inserire l'email
     const userEmail = prompt('Inserisci la tua email:');
+
+    // Controlliamo se l'email è nella lista
+    let isAllowed = false;
+    for (let i = 0; i < allowedEmails.length; i++) {
+        if (userEmail === allowedEmails[i]) {
+            isAllowed = true;
+            break;
+        }
+    }
 }
 
 // Dice
