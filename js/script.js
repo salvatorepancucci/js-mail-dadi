@@ -25,3 +25,10 @@ document.getElementById('emailForm').addEventListener('submit', function(event) 
         emailResultDiv.innerHTML = `<div class="alert alert-danger" role="alert">Accesso negato! Email non autorizzata.</div>`;
     }
 });
+
+// Esercizio Gioco dei dadi
+document.getElementById('giocaDadiBtn').addEventListener('click', function() {
+    // Generiamo un numero casuale da 1 a 6 per il giocatore
+    const giocatore = Math.floor(Math.random() * 6) + 1;
+
+}
