@@ -1,4 +1,4 @@
-// Mail
+// Esercizio Mail
 
 function checkEmail() {
     // Lista di chi può accedere
@@ -12,7 +12,6 @@ function checkEmail() {
     for (let i = 0; i < allowedEmails.length; i++) {
         if (userEmail === allowedEmails[i]) {
             isAllowed = true;
-            break;
         }
     }
 
