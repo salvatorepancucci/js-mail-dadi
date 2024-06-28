@@ -1,27 +1,27 @@
 // Esercizio Mail
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitiamo il submit del form
 
-function checkEmail() {
     // Lista di chi può accedere
-    const allowedEmails = ['pippo@example.com', 'pluto@example.com', 'paperino@example.com', 'topolino@example.com'];
+    const allowedEmails = ['pippo@example.com', 'pluto@example.com', 'paperino@example.com'];
 
-    // Chiediamo all'utente di inserire l'email
-    const userEmail = prompt('Inserisci la tua email:');
+    // Otteniamo l'email inserita dall'utente
+    const userEmail = document.getElementById('inputEmail').value.trim().toLowerCase();
 
     // Controlliamo se l'email è nella lista
     let isAllowed = false;
     for (let i = 0; i < allowedEmails.length; i++) {
         if (userEmail === allowedEmails[i]) {
             isAllowed = true;
+            break;
         }
     }
 
-    // Stampiamo un messaggio appropriato sull'esito del controllo
+    // Prepariamo il messaggio da mostrare
+    const emailResultDiv = document.getElementById('emailResult');
     if (isAllowed) {
-        alert('Accesso consentito!');
+        emailResultDiv.innerHTML = `<div class="alert alert-success" role="alert">Accesso consentito!</div>`;
     } else {
-        alert('Accesso negato! Email non autorizzata.');
+        emailResultDiv.innerHTML = `<div class="alert alert-danger" role="alert">Accesso negato! Email non autorizzata.</div>`;
     }
-}
-
-// Dice
-
+});
