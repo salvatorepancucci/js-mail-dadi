@@ -1,0 +1,8 @@
+// Mail
+
+function checkEmail() {
+    
+}
+
+// Dice
+
