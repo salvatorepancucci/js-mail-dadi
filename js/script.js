@@ -31,4 +31,6 @@ document.getElementById('giocaDadiBtn').addEventListener('click', function() {
     // Generiamo un numero casuale da 1 a 6 per il giocatore
     const giocatore = Math.floor(Math.random() * 6) + 1;
 
+     // Generiamo un numero casuale da 1 a 6 per il computer
+    const computer = Math.floor(Math.random() * 6) + 1;
 }
